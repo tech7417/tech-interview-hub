@@ -21,7 +21,7 @@ This repository contains a collection of essential JavaScript interview question
 
 If you prefer to have the questions and answers in a PDF format, you can download it by clicking the link below:
 
-[Download PDF Version]('./javascript/oTH3heB6aoQAsxZ4qugorM.pdf')
+[Download PDF Version](./oTH3heB6aoQAsxZ4qugorM.pdf)
 
 ---
 
