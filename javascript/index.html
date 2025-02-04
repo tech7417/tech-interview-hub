@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debounce Search Input Example</title>
+    <style>
+        #results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Type to search...">
+    <div id="results"></div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const results = document.getElementById('results');
+    
+        // Debounce function
+        // function debounce(func, wait) {
+        //     let timeout;
+        //     return function(...args) {
+        //         const context = this;
+        //         clearTimeout(timeout);
+        //         timeout = setTimeout(() => func.apply(context, args), wait);
+        //     };
+        // }
+    
+        function debouncingprocess(fun , waititme  = 0){
+     let timeid = null;
+      return  function(...args){
+         const context = this;
+          clearTimeout(timeid);
+           timeid = setTimeout(function(){
+                   return fun.apply(context, args);
+           }, waititme)
+      }
+
+}
+        // Function to simulate fetching search results
+        function fetchSearchResults(query) {
+            console.log('Fetching results for:', query);
+            // Simulate an API call with a delay
+            setTimeout(() => {
+                results.innerHTML = `Results for "${query}"`;
+            }, 500);
+        }
+    
+        // Debounced version of the fetchSearchResults function
+        const debouncedFetchSearchResults = debouncingprocess(fetchSearchResults, 500);
+    
+        // Event listener for the input field
+        searchInput.addEventListener('input', (event) => {
+            //fetchSearchResults(event.target.value);
+            debouncedFetchSearchResults(event.target.value);
+        });
+    </script>
+</body>
+</html>
