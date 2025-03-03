@@ -352,6 +352,22 @@ export class UserService implements OnModuleInit {
   }
 }
 ```
+With spec files (for testing)
+sh
+Copy
+Edit
+nest g module users
+nest g service users
+nest g controller users
+
+
+without spec
+
+
+nest g module users --no-spec
+nest g service users --no-spec
+nest g controller users --no-spec
+
 
 ---
 
