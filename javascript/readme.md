@@ -1,5 +1,34 @@
 # Top JavaScript Interview Questions 
 
+
+
+# JavaScript Basics
+
+This document provides an overview of various JavaScript concepts, examples, and behaviors. It covers topics such as type coercion, operators, scoping, arrays, objects, and asynchronous behavior.
+
+---
+
+## Table of Contents
+1. [Type Coercion and Operators](#type-coercion-and-operators)
+2. [Scoping and Variables](#scoping-and-variables)
+3. [Data Types](#data-types)
+4. [Special Cases with NaN](#special-cases-with-nan)
+5. [Array and Object Behavior](#array-and-object-behavior)
+6. [Boolean Coercion](#boolean-coercion)
+7. [Asynchronous Behavior](#asynchronous-behavior)
+8. [Miscellaneous Examples](#miscellaneous-examples)
+
+---
+
+## Type Coercion and Operators
+
+### Arithmetic Operations
+```javascript
+console.log(1 + false); // 1
+console.log(1 + true);  // 2
+console.log(1 + null);  // 1
+console.log(1 - false); // 1
+
 **Updated for 2025!** This repository contains a few hundred curated JavaScript interview questions with high quality answers for acing your Front End Engineer interviews. The questions are divided into two sections:
 
 1. [**Top questions**](#table-of-contents-top-questions): List of the most important JavaScript interview questions that are commonly-asked during Front End Developer interviews. This README displays the concise version of the answers and links are provided to the full version of answers for further learning. If you are are short on time, start with this section.
